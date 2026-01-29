@@ -1,3 +1,6 @@
 .vscode/
 *.bak
 *.old.html
+.vscode/
+*.bak
+*.old.html
