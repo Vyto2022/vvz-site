@@ -30,4 +30,16 @@
 input,select,textarea{width:100%;padding:10px 12px;border-radius:12px;border:1px solid rgba(38,38,58,.9);background:rgba(12,12,18,.65);color:var(--t);outline:none}
 textarea{min-height:110px;resize:vertical}
 .case-link{margin-top:10px;color:var(--a1);font-weight:800}
+.hero-badges{display:flex;gap:10px;flex-wrap:wrap;margin-top:12px}
+.hero-badges .tag{font-weight:700}
+.hero-title{max-width:22ch}
+.hero-card{position:relative;overflow:hidden}
+.hero-card:before{
+  content:"";
+  position:absolute;inset:-40%;
+  background:radial-gradient(closest-side,rgba(0,178,255,.20),transparent 60%),
+             radial-gradient(closest-side,rgba(122,44,255,.16),transparent 60%);
+  transform:rotate(12deg);
+}
+.hero-card > *{position:relative}
 
