@@ -22,10 +22,10 @@
 
   <!-- NAV -->
   <header class="top">
-    <div class="c" style="display:flex;justify-content:space-between;align-items:center;gap:14px;flex-wrap:wrap">
+    <div class="c"top-inner
       <a href="#top" class="btn" style="font-weight:900">VVZ Studio</a>
 
-      <nav class="links" style="display:flex;gap:14px;flex-wrap:wrap;align-items:center">
+      <nav class="links" aria-label="Primary">
         <a href="#work">Work</a>
         <a href="#services">Services</a>
         <a href="#process">Process</a>
@@ -33,8 +33,6 @@
         <a href="#pricing">Pricing</a>
         <a href="#faq">FAQ</a>
         <a class="btn btnP" href="#contact">Get a quote</a>
-        <a class="btn" href="#work" style="margin-left:10px">See work</a>
-        <a class="btn" href="https://t.me/vyto1501" target="_blank" rel="noopener" style="margin-left:10px">Telegram</a>
       </nav>
     </div>
   </header>
@@ -56,8 +54,10 @@
 
         <p class="lead">Perfect for auto services, detailing, tire shops, cleaning, repairs — any local service.</p>
 
-        <a class="btn btnP" href="#contact">Get a quote</a>
-        <a class="btn" href="#work" style="margin-left:10px">See work</a>
+        <div class="hero-actions">
+          <a class="btn btnP" href="#contact">Get a quote</a>
+          <a class="btn" href="#work">See work</a>
+        </div>
       </div>
     </div>
   </section>
@@ -68,7 +68,7 @@
       <h2>Work</h2>
       <p class="lead">3 examples of “local service” pages (click to open the case).</p>
 
-      <div class="grid3" style="margin-top:14px">
+      <div class="grid3 mt-14">
         <a href="case-auto.html" style="text-decoration:none;color:inherit">
           <div class="card">
             <h3>Auto Service — Bookings</h3>
@@ -102,7 +102,7 @@
       <h2>Services</h2>
       <p class="lead">Everything needed to launch and start getting inquiries.</p>
 
-      <div class="grid3" style="margin-top:14px">
+      <div class="grid3 mt-14">
         <div class="card">
           <h3>Landing page</h3>
           <p>Structure, copy, CTA, trust blocks, and mobile-first layout.</p>
@@ -130,7 +130,7 @@
       <h2>Process</h2>
       <p class="lead">Simple, fast, and transparent.</p>
 
-      <div class="grid3" style="margin-top:14px">
+      <div class="grid3 mt-14">
         <div class="card">
           <h3>1) Brief (15 min)</h3>
           <p>Niche, offer, city, contacts. I ask the right questions.</p>
@@ -158,7 +158,7 @@
       <h2>Why clients choose VVZ</h2>
       <p class="lead">Clear scope, fast delivery, no surprises.</p>
 
-      <div class="grid3" style="margin-top:14px">
+      <div class="grid3 mt-14">
         <div class="card">
           <h3>Fixed scope</h3>
           <p>You know exactly what you get — sections, form flow, and delivery time.</p>
@@ -186,7 +186,7 @@
       <h2>Pricing</h2>
       <p class="lead">Choose a package based on your goal and timeframe.</p>
 
-      <div class="grid3" style="margin-top:14px">
+      <div class="grid3 mt-14">
         <div class="card">
           <h3>Start</h3>
           <p class="lead">1 landing • form + thank you • basic SEO</p>
@@ -259,37 +259,45 @@
       <h2>Contact</h2>
       <p class="lead">Tell me what you do and what city you serve — I’ll reply with a plan.</p>
 
-      <div style="display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:14px">
-        <div class="card">
+      <div class="contact-grid">
+        <div class="cta-row">
           <h3>Fast contact</h3>
-          <p>Telegram / WhatsApp / Email — whichever is easier.</p>
-          <ul>
-            <li>Telegram: <b><a href="https://t.me/@vyto1501" target="_blank" rel="noopener">@USERNAME</a></b></li>
-            <li>WhatsApp: <b><a href="https://wa.me/33605997424" target="_blank" rel="noopener">+33 ... .. ..</a></b></li>
-            <li>Email: <b><a href="mailto:nvzgardan@hotmail.com">YOUR@email.com</a></b></li>
+          <div class="cta-actions">
+            <a class="btn btnIcon" href="https://t.me/vyto1501" target="_blank" rel="noopener noreferrer">
+              <svg class="cta-ic" aria-hidden="true"><use href="#i-telegram"></use></svg>
+              Telegram
+            </a>
 
-          </ul>
-          <p style="margin-top:10px;color:var(--m)">Tip: replace contacts with your real ones.</p>
+            <a class="btn btnIcon" href="https://wa.me/33XXXXXXXXX" target="_blank" rel="noopener noreferrer">
+              <svg class="cta-ic" aria-hidden="true"><use href="#i-whatsapp"></use></svg>
+              WhatsApp
+            </a>
+
+            <a class="btn btnIcon" href="mailto:nvzgardan@hotmail.com">
+              <svg class="cta-ic" aria-hidden="true"><use href="#i-email"></use></svg>
+              Email
+            </a>
+          </div>
         </div>
 
         <form id="quoteForm" class="card" method="POST" action="https://formspree.io/f/xjgwkwgo">
           <h3>Request a quote</h3>
 
-          <label style="display:block;margin-top:10px;color:var(--m)">Name</label>
-          <input name="name" required style="width:100%;margin-top:6px;padding:10px;border-radius:12px;border:1px solid rgba(38,38,58,.9);background:rgba(17,17,26,.55);color:var(--t)">
+          <label>Name</label>
+          <input name="name" required>
 
-          <label style="display:block;margin-top:10px;color:var(--m)">Email</label>
-          <input name="email" type="email" required style="width:100%;margin-top:6px;padding:10px;border-radius:12px;border:1px solid rgba(38,38,58,.9);background:rgba(17,17,26,.55);color:var(--t)">
+          <label>Email</label>
+          <input name="email" type="email" required>
 
-          <label style="display:block;margin-top:10px;color:var(--m)">Project</label>
-          <select name="project" style="width:100%;margin-top:6px;padding:10px;border-radius:12px;border:1px solid rgba(38,38,58,.9);background:rgba(17,17,26,.55);color:var(--t)">
+          <label>Project</label>
+          <select name="project">
             <option>Start</option>
             <option>Pro</option>
             <option>Fix (48h)</option>
           </select>
 
-          <label style="display:block;margin-top:10px;color:var(--m)">Message</label>
-          <textarea name="message" rows="5" required style="width:100%;margin-top:6px;padding:10px;border-radius:12px;border:1px solid rgba(38,38,58,.9);background:rgba(17,17,26,.55);color:var(--t)"></textarea>
+          <label>Message</label>
+          <textarea name="message" rows="5" required></textarea>
 
           <button class="btn btnP" type="submit" style="margin-top:12px">Send</button>
         </form>
@@ -305,6 +313,20 @@
     const y = document.getElementById('y');
     if (y) y.textContent = new Date().getFullYear();
   </script>
+  <!-- icons -->
+<svg xmlns="http://www.w3.org/2000/svg" style="position:absolute;width:0;height:0;overflow:hidden">
+  <symbol id="i-telegram" viewBox="0 0 24 24">
+    <path fill="currentColor" d="M21.9 4.6c.2-1-1-1.8-1.9-1.4L2.7 10.1c-1 .4-.9 1.8.1 2.1l4.4 1.4 1.7 5.4c.3 1 1.6 1.1 2.1.3l2.5-3.7 4.9 3.6c.8.6 2 .1 2.2-.9l3.3-15.1zM8.5 13.1l8.7-5.4-7 6.4-.3 3.1-1.1-3.4-3.1-1 2.8-1.1z"/>
+  </symbol>
+
+  <symbol id="i-whatsapp" viewBox="0 0 24 24">
+    <path fill="currentColor" d="M12 2a9.5 9.5 0 0 0-8.2 14.3L3 22l5.9-1.8A9.5 9.5 0 1 0 12 2zm0 1.9a7.6 7.6 0 0 1 0 15.2c-1.4 0-2.8-.4-4-1l-.3-.2-3.4 1 1-3.3-.2-.3A7.6 7.6 0 0 1 12 3.9zm4.1 10.6c-.2-.1-1.2-.6-1.4-.7-.2-.1-.4-.1-.6.1l-.8 1c-.1.2-.3.2-.5.1a6.2 6.2 0 0 1-1.8-1.1 6.7 6.7 0 0 1-1.2-1.6c-.1-.2 0-.4.1-.5l.6-.7c.1-.2.1-.4 0-.6l-.7-1.6c-.2-.5-.6-.4-.8-.4h-.7c-.2 0-.5.1-.7.4-.2.2-.9.9-.9 2.2 0 1.3.9 2.6 1 2.8.1.2 1.8 2.8 4.5 3.9.6.3 1.1.4 1.5.5.6.2 1.2.1 1.6 0 .5-.1 1.2-.5 1.4-1 .2-.5.2-1 .1-1.1-.1-.1-.3-.2-.5-.3z"/>
+  </symbol>
+
+  <symbol id="i-email" viewBox="0 0 24 24">
+    <path fill="currentColor" d="M20 4H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2zm0 4.2-8 5.3-8-5.3V6l8 5 8-5v2.2z"/>
+  </symbol>
+</svg>
 
 </body>
 </html>
