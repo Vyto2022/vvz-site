@@ -36,3 +36,67 @@
     }
   });
 })();
+// Sticky CTA: show on scroll (mobile), hide when in contact section
+(() => {
+  const sticky = document.getElementById("stickyCta");
+  const contact = document.getElementById("contact");
+  if (!sticky || !contact) return;
+
+  const showAfter = 260; // px scrolled before showing
+  const setVisible = (v) => {
+    sticky.classList.toggle("is-visible", v);
+    sticky.setAttribute("aria-hidden", v ? "false" : "true");
+  };
+
+  // Show after scroll threshold
+  const onScroll = () => {
+    const shouldShow = window.scrollY > showAfter;
+    setVisible(shouldShow);
+  };
+
+  // Hide when Contact section is visible
+  const io = new IntersectionObserver(
+    (entries) => {
+      const inContact = entries.some((e) => e.isIntersecting);
+      sticky.classList.toggle("is-visible", !inContact && window.scrollY > showAfter);
+    },
+    { threshold: 0.15 }
+  );
+  io.observe(contact);
+
+  window.addEventListener("scroll", onScroll, { passive: true });
+  onScroll();
+})();
+// Quick message: prefill form + focus message
+(() => {
+  const btn = document.getElementById("quickMsgBtn");
+  const contact = document.getElementById("contact");
+  if (!btn || !contact) return;
+
+  const project = document.getElementById("project");
+  const message = document.getElementById("message");
+
+  btn.addEventListener("click", (e) => {
+    // Let the hash navigation happen, but also prefill
+    // Small delay to ensure the section is in view on some browsers
+    setTimeout(() => {
+      // Default to Pro (you can change)
+      if (project) project.value = "Pro";
+
+      if (message) {
+        const template =
+`Niche:
+City:
+Main offer:
+Goal (calls / leads / bookings):
+Current website (optional):
+Notes:`;
+        if (!message.value || message.value.trim().length < 5) {
+          message.value = template;
+        }
+        message.focus();
+        message.setSelectionRange(message.value.length, message.value.length);
+      }
+    }, 120);
+  });
+})();
