@@ -71,12 +71,8 @@ textarea{min-height:110px;resize:vertical}
 .work-card { position: relative; overflow: hidden; }
 .work-thumb{
   height: 140px;
-  border-radius: 14px;
   margin-bottom: 14px;
-  border: 1px solid rgba(255,255,255,.10);
-  box-shadow: 0 10px 30px rgba(0,0,0,.18);
-  position: relative;
-  overflow: hidden;
+  border-radius: 14px;
 }
 
 /* Subtle "UI" lines */
@@ -122,19 +118,28 @@ textarea{min-height:110px;resize:vertical}
   transform: translateY(-2px);
   transition: transform .18s ease;
 }
-/* Accessibility: skip link */
+/* Accessibility: compact skip link */
 .skip-link{
-  position:absolute;
-  left:12px; top:12px;
-  padding:10px 12px;
-  border-radius:12px;
-  background: rgba(255,255,255,.10);
-  border: 1px solid rgba(255,255,255,.18);
-  text-decoration:none;
-  transform: translateY(-140%);
-  transition: transform .18s ease;
+  position: fixed;
+  left: 8px;
+  top: 8px;
+  padding: 6px 10px;
+  border-radius: 10px;
+  font-size: 13px;
+  line-height: 1;
+  background: rgba(255,255,255,.08);
+  border: 1px solid rgba(255,255,255,.14);
+  text-decoration: none;
+  transform: translateY(-200%);
+  transition: transform .16s ease;
   z-index: 9999;
 }
+:where(a, button, input, textarea, select):focus-visible{
+  outline: 2px solid rgba(255,255,255,.45);
+  outline-offset: 2px;
+  border-radius: 10px;
+}
+
 .skip-link:focus{
   transform: translateY(0);
 }
