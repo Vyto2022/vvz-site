@@ -5,3 +5,8 @@
 *.bak
 *.old.html
 *.swp
+
+# editor/backup
+*.swp
+*.save
+.DS_Store
