@@ -10,3 +10,9 @@
 *.swp
 *.save
 .DS_Store
+
+# editor/backup
+*.swp
+*.save
+*~
+.DS_Store
