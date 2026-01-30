@@ -85,12 +85,13 @@
 
       if (message) {
         const template =
-`Niche:
-City:
-Main offer:
-Goal (calls / leads / bookings):
-Current website (optional):
-Notes:`;
+           `Niche :
+            Ville :
+            Offre principale :
+            Objectif (appels / leads / réservations) :
+            Site actuel (optionnel) :
+            Notes :`;
+
         if (!message.value || message.value.trim().length < 5) {
           message.value = template;
         }

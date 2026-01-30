@@ -67,51 +67,6 @@ textarea{min-height:110px;resize:vertical}
 .badge{display:inline-block;padding:6px 10px;border-radius:999px;border:1px solid rgba(255,255,255,.12);font-size:.92rem;opacity:.92}
 .case-cta { padding: 56px 0; }
 .case-cta .card { text-align: center; }
-/* Work card previews */
-.work-card { position: relative; overflow: hidden; }
-.work-thumb{
-  height: 140px;
-  margin-bottom: 14px;
-  border-radius: 14px;
-}
-
-/* Subtle "UI" lines */
-.work-thumb::before{
-  content:"";
-  position:absolute; inset:0;
-  background:
-    linear-gradient(to bottom, rgba(255,255,255,.10), rgba(255,255,255,0)),
-    repeating-linear-gradient(
-      to bottom,
-      rgba(255,255,255,.10) 0px,
-      rgba(255,255,255,.10) 1px,
-      rgba(255,255,255,0) 1px,
-      rgba(255,255,255,0) 10px
-    );
-  opacity: .35;
-}
-
-/* Little "header bar" vibe */
-.work-thumb::after{
-  content:"";
-  position:absolute; left:12px; top:12px; right:12px; height:14px;
-  border-radius: 10px;
-  background: rgba(255,255,255,.08);
-}
-
-/* Variants */
-.t-auto{
-  background: radial-gradient(1200px 300px at 10% 20%, rgba(255,255,255,.18), rgba(255,255,255,0)),
-              linear-gradient(135deg, rgba(0,160,255,.35), rgba(0,0,0,0));
-}
-.t-detailing{
-  background: radial-gradient(900px 260px at 30% 20%, rgba(255,255,255,.16), rgba(255,255,255,0)),
-              linear-gradient(135deg, rgba(255,80,140,.35), rgba(0,0,0,0));
-}
-.t-tires{
-  background: radial-gradient(900px 260px at 20% 25%, rgba(255,255,255,.16), rgba(255,255,255,0)),
-              linear-gradient(135deg, rgba(160,255,120,.30), rgba(0,0,0,0));
-}
 
 /* Hover polish */
 .work-card:hover .work-thumb{
@@ -303,6 +258,45 @@ input, textarea, select { border-radius: 12px; }
 
 .form-row{
   display:grid;
+/* Sticky CTA (mobile) */
+.sticky-cta{
+  position: fixed;
+  left: 0; right: 0; bottom: 0;
+  padding: 10px 12px;
+  background: rgba(0,0,0,.72);
+  backdrop-filter: blur(10px);
+  border-top: 1px solid rgba(255,255,255,.10);
+  z-index: 9998;
+  transform: translateY(120%);
+  transition: transform .18s ease;
+}
+
+.sticky-cta.is-visible{ transform: translateY(0); }
+
+.sticky-cta-inner{
+  max-width: 1100px;
+  margin: 0 auto;
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+}
+
+/* Make buttons compact in sticky bar */
+.sticky-cta .btn{
+  padding: 10px 14px;
+  border-radius: 12px;
+  font-size: 14px;
+}
+
+/* Only on mobile */
+@media (min-width: 901px){
+  .sticky-cta{ display:none; }
+}
+
+/* Prevent page content hiding behind sticky bar */
+@media (max-width: 900px){
+  body{ padding-bottom: 70px; }
+}
   grid-template-columns: 1fr 1fr;
   gap: 12px;
 }
@@ -507,3 +501,26 @@ input, textarea, select { border-radius: 12px; }
   font-size: 13px;
   opacity: .72;
 }
+/* Work cards — subtle accent, consistent with site */
+.work-card{
+  position: relative;
+  overflow: hidden;
+}
+.work-card::before{
+  content:"";
+  position:absolute;
+  left:-30px; top:-30px;
+  width: 120px; height: 120px;
+  border-radius: 999px;
+  background: rgba(255,255,255,.06);
+  filter: blur(0px);
+}
+.work-link:hover .work-card{
+  transform: translateY(-2px);
+  transition: transform .18s ease;
+}
+.lang{display:flex;align-items:center;gap:8px;margin-left:12px}
+.lang-link{text-decoration:none;opacity:.75}
+.lang-link.is-active{opacity:1;font-weight:800}
+.lang-sep{opacity:.35}
+@media (max-width:900px){.lang{margin-top:8px}}
