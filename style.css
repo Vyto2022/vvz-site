@@ -63,3 +63,5 @@ textarea{min-height:110px;resize:vertical}
   .links{display:none}
   .contact-grid{grid-template-columns:1fr}
 }
+.badges{display:flex;flex-wrap:wrap;gap:10px}
+.badge{display:inline-block;padding:6px 10px;border-radius:999px;border:1px solid rgba(255,255,255,.12);font-size:.92rem;opacity:.92}
