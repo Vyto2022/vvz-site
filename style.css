@@ -122,3 +122,47 @@ textarea{min-height:110px;resize:vertical}
   transform: translateY(-2px);
   transition: transform .18s ease;
 }
+/* Accessibility: skip link */
+.skip-link{
+  position:absolute;
+  left:12px; top:12px;
+  padding:10px 12px;
+  border-radius:12px;
+  background: rgba(255,255,255,.10);
+  border: 1px solid rgba(255,255,255,.18);
+  text-decoration:none;
+  transform: translateY(-140%);
+  transition: transform .18s ease;
+  z-index: 9999;
+}
+.skip-link:focus{
+  transform: translateY(0);
+}
+
+/* Accessibility: focus styles */
+:where(a, button, input, textarea, select):focus-visible{
+  outline: 3px solid rgba(255,255,255,.50);
+  outline-offset: 3px;
+  border-radius: 12px;
+}
+
+/* Make links/buttons feel consistent */
+a{ text-underline-offset: 3px; }
+a:hover{ text-decoration-thickness: 2px; }
+.btn:focus-visible{
+  outline: 3px solid rgba(255,255,255,.55);
+  outline-offset: 3px;
+}
+.btn:hover{
+  transform: translateY(-1px);
+  transition: transform .18s ease;
+}
+.work-link{
+  text-decoration:none;
+  color:inherit;
+  display:block;
+}
+.work-link:focus-visible .work-card{
+  outline: 3px solid rgba(255,255,255,.55);
+  outline-offset: 4px;
+}
