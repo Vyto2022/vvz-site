@@ -32,8 +32,7 @@
   <!-- NAV -->
   <header class="top">
      <div class="c top-inner">
-      <a href="#top" class="btn" style="font-weight:900">VVZ Studio</a>
-
+      <a href="#top" class="btn" style="font-weight:900" aria-label="VVZ Studio — back to top">VVZ Studio</a>
       <nav class="links" aria-label="Primary">
         <a href="#work">Work</a>
         <a href="#services">Services</a>
@@ -268,56 +267,81 @@
   </section>
 
   <!-- CONTACT -->
-  <section id="contact">
-    <div class="c">
-      <h2>Contact</h2>
-      <p class="lead">Tell me what you do and what city you serve — I’ll reply with a plan.</p>
+<section id="contact">
+  <div class="c">
+    <h2>Contact</h2>
+    <p class="lead">Tell me what you do and what city you serve — I’ll reply with a plan.</p>
 
-      <div class="contact-grid">
-        <div class="cta-row">
-          <h3>Fast contact</h3>
-          <div class="cta-actions">
-            <a class="btn btnIcon" href="https://t.me/vyto1501" target="_blank" rel="noopener noreferrer">
-              <svg class="cta-ic" aria-hidden="true"><use href="#i-telegram"></use></svg>
-              Telegram
-            </a>
+    <div class="card contact-wrap">
+      <!-- LEFT -->
+      <div class="contact-left">
+        <h3>Fast contact</h3>
+        <p class="muted">Pick your channel — reply within 24h.</p>
 
-            <a class="btn btnIcon" href="https://wa.me/33XXXXXXXXX" target="_blank" rel="noopener noreferrer">
-              <svg class="cta-ic" aria-hidden="true"><use href="#i-whatsapp"></use></svg>
-              WhatsApp
-            </a>
+        <div class="contact-quick">
+          <a class="chip" href="YOUR_TELEGRAM_LINK">Telegram</a>
+          <a class="chip" href="YOUR_WHATSAPP_LINK">WhatsApp</a>
+          <a class="chip" href="mailto:YOUR_EMAIL">Email</a>
+        </div>
 
-            <a class="btn btnIcon" href="mailto:nvzgardan@hotmail.com">
-              <svg class="cta-ic" aria-hidden="true"><use href="#i-email"></use></svg>
-              Email
-            </a>
+        <div class="contact-mini">
+          <div class="mini">
+            <div class="mini-k">Response</div>
+            <div class="mini-v">≤ 24h</div>
+          </div>
+          <div class="mini">
+            <div class="mini-k">Delivery</div>
+            <div class="mini-v">3–7 days</div>
+          </div>
+          <div class="mini">
+            <div class="mini-k">Best for</div>
+            <div class="mini-v">Local services</div>
           </div>
         </div>
 
-        <form id="quoteForm" class="card" method="POST" action="https://formspree.io/f/xjgwkwgo">
-          <h3>Request a quote</h3>
+        <div class="contact-proof">
+          <div class="proof-row">✅ Mobile-first CTA hierarchy</div>
+          <div class="proof-row">✅ Lead capture + tracking-ready</div>
+          <div class="proof-row">✅ Clean copy + trust stack</div>
+        </div>
+      </div>
 
-          <label>Name</label>
-          <input name="name" required>
+      <!-- RIGHT -->
+      <form class="contact-right">
+        <h3>Request a quote</h3>
 
-          <label>Email</label>
-          <input name="email" type="email" required>
+        <div class="form-row">
+          <div class="field">
+            <label for="name">Name</label>
+            <input id="name" name="name" type="text" autocomplete="name" placeholder="Your name" />
+          </div>
 
-          <label>Project</label>
-          <select name="project">
+          <div class="field">
+            <label for="email">Email</label>
+            <input id="email" name="email" type="email" autocomplete="email" placeholder="you@company.com" />
+          </div>
+        </div>
+
+        <div class="field">
+          <label for="project">Project</label>
+          <select id="project" name="project">
             <option>Start</option>
             <option>Pro</option>
             <option>Fix (48h)</option>
           </select>
+        </div>
 
-          <label>Message</label>
-          <textarea name="message" rows="5" required></textarea>
+        <div class="field">
+          <label for="message">Message</label>
+          <textarea id="message" name="message" rows="6" placeholder="Niche + city + main offer (optional: website link)"></textarea>
+        </div>
 
-          <button class="btn btnP" type="submit" style="margin-top:12px">Send</button>
-        </form>
-      </div>
+        <button class="btn btnP" type="submit">Send</button>
+        <p class="contact-note">Tip: “Auto detailing — Tarbes — Premium package — need more calls”.</p>
+      </form>
     </div>
-  </section>
+  </div>
+</section>
 
   <footer class="c" style="padding:18px 20px;color:var(--m)">
     <p style="margin:0">© <span id="y"></span> VVZ Studio</p>
