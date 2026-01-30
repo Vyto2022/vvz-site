@@ -65,3 +65,60 @@ textarea{min-height:110px;resize:vertical}
 }
 .badges{display:flex;flex-wrap:wrap;gap:10px}
 .badge{display:inline-block;padding:6px 10px;border-radius:999px;border:1px solid rgba(255,255,255,.12);font-size:.92rem;opacity:.92}
+.case-cta { padding: 56px 0; }
+.case-cta .card { text-align: center; }
+/* Work card previews */
+.work-card { position: relative; overflow: hidden; }
+.work-thumb{
+  height: 140px;
+  border-radius: 14px;
+  margin-bottom: 14px;
+  border: 1px solid rgba(255,255,255,.10);
+  box-shadow: 0 10px 30px rgba(0,0,0,.18);
+  position: relative;
+  overflow: hidden;
+}
+
+/* Subtle "UI" lines */
+.work-thumb::before{
+  content:"";
+  position:absolute; inset:0;
+  background:
+    linear-gradient(to bottom, rgba(255,255,255,.10), rgba(255,255,255,0)),
+    repeating-linear-gradient(
+      to bottom,
+      rgba(255,255,255,.10) 0px,
+      rgba(255,255,255,.10) 1px,
+      rgba(255,255,255,0) 1px,
+      rgba(255,255,255,0) 10px
+    );
+  opacity: .35;
+}
+
+/* Little "header bar" vibe */
+.work-thumb::after{
+  content:"";
+  position:absolute; left:12px; top:12px; right:12px; height:14px;
+  border-radius: 10px;
+  background: rgba(255,255,255,.08);
+}
+
+/* Variants */
+.t-auto{
+  background: radial-gradient(1200px 300px at 10% 20%, rgba(255,255,255,.18), rgba(255,255,255,0)),
+              linear-gradient(135deg, rgba(0,160,255,.35), rgba(0,0,0,0));
+}
+.t-detailing{
+  background: radial-gradient(900px 260px at 30% 20%, rgba(255,255,255,.16), rgba(255,255,255,0)),
+              linear-gradient(135deg, rgba(255,80,140,.35), rgba(0,0,0,0));
+}
+.t-tires{
+  background: radial-gradient(900px 260px at 20% 25%, rgba(255,255,255,.16), rgba(255,255,255,0)),
+              linear-gradient(135deg, rgba(160,255,120,.30), rgba(0,0,0,0));
+}
+
+/* Hover polish */
+.work-card:hover .work-thumb{
+  transform: translateY(-2px);
+  transition: transform .18s ease;
+}
