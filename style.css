@@ -126,7 +126,8 @@ textarea{resize:vertical}
 .status{margin-top:10px;font-size:13px;color:var(--m)}
 .status.ok{color:#78f0c3}
 .status.err{color:#ff8aa1}
-@media(max-width:980px){
+@media(max-width:840
+px){
   .navbar{grid-template-columns:1fr; justify-items:center}
   .brand{justify-self:center}
   .navRight{justify-self:center}
