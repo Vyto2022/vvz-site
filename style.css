@@ -146,3 +146,34 @@ textarea{resize:vertical}
 .heroImg{width:100%;max-width:560px;height:auto;border-radius:16px;border:1px solid rgba(38,38,58,.9);display:block}
 .workThumb{width:100%;height:150px;object-fit:cover;border-radius:14px;border:1px solid rgba(38,38,58,.9);margin-bottom:10px;background:rgba(17,17,26,.55)}
 .cta-ic{width:16px;height:16px;display:inline-block;vertical-align:-2px;margin-right:6px}
+/* Make Contact cards same height + aligned */
+.contactGrid{
+  align-items: stretch;          /* important: stretch columns to same height */
+}
+
+.contactAside,
+.formCard{
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Left card: keep buttons at the bottom for symmetry */
+.contactAside .cta-row{
+  margin-top: auto;              /* pushes buttons down */
+}
+
+/* Keep the note under buttons (optional) */
+.contactAside .miniNote{
+  margin-top: 12px;
+}
+
+/* Form: keep actions near bottom */
+.formCard .formActions{
+  margin-top: auto;              /* pushes buttons/actions down */
+}
+
+/* Optional: avoid the sticky card shrinking weirdly */
+.contactAside{
+  align-self: stretch;
+}
