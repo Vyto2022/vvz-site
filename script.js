@@ -1,9 +1,12 @@
 /* VVZ Studio — tiny helpers (no frameworks) */
-
 (function () {
   // Footer year
   const y = document.getElementById("y");
   if (y) y.textContent = String(new Date().getFullYear());
+
+  // UA for server-side lead logs
+  const ua = document.getElementById("ua");
+  if (ua) ua.value = navigator.userAgent;
 
   // Sticky CTA visibility (mobile)
   const sticky = document.querySelector(".sticky-cta");

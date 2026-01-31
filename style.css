@@ -2,6 +2,37 @@
    VVZ Studio — styles
    Clean + compact + mobile-first
    =========================== */
+:root{
+  --bg: #070A10;
+  --panel: rgba(255,255,255,.06);
+  --panel2: rgba(255,255,255,.085);
+  --stroke: rgba(255,255,255,.10);
+  --text: rgba(255,255,255,.92);
+  --muted: rgba(255,255,255,.68);
+
+  /* НЕ синий акцент — выбери один */
+  --accent: #A855F7;   /* фиолетовый (премиум) */
+  /* --accent: #F59E0B; */ /* янтарный (энергичнее) */
+
+  --radius: 18px;
+  --shadow: 0 12px 34px rgba(0,0,0,.35);
+}
+
+html { scroll-behavior: smooth; }
+body{
+  font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+  background: radial-gradient(900px 600px at 20% 0%, rgba(168,85,247,.18), transparent 55%),
+              radial-gradient(700px 500px at 80% 20%, rgba(245,158,11,.10), transparent 60%),
+              var(--bg);
+  color: var(--text);
+  line-height: 1.65;
+}
+
+h1,h2,h3{
+  font-family: "Space Grotesk", Inter, system-ui, sans-serif;
+  letter-spacing: -0.02em;
+  line-height: 1.12;
+}
 
 :root{
   --bg:#0b0b0f;
@@ -29,8 +60,20 @@ body{
 
 a{color:inherit;text-decoration:none;text-underline-offset:3px}
 a:hover{text-decoration-thickness:2px}
-.c{max-width:var(--max);margin:0 auto;padding:0 20px}
-section{padding:46px 0}
+.c{
+  max-width: 1120px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+section{
+  padding: 84px 0;
+}
+
+@media (max-width: 720px){
+  section{ padding: 64px 0; }
+}
+
 
 p{margin:0;color:var(--m);line-height:1.6}
 .lead{margin:0 0 16px;color:var(--m);line-height:1.65}
@@ -111,6 +154,33 @@ p{margin:0;color:var(--m);line-height:1.6}
   box-shadow:0 12px 24px rgba(0,178,255,.14);
 }
 
+/* Mini icons inside buttons */
+.btn .ico{
+  width:16px;
+  height:16px;
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  flex:0 0 16px;
+  opacity:.96;
+}
+.btn .ico svg{
+  width:16px;
+  height:16px;
+  display:block;
+  fill:currentColor;
+}
+
+/* Honeypot field */
+.hp{
+  position:absolute !important;
+  left:-9999px !important;
+  top:auto !important;
+  width:1px !important;
+  height:1px !important;
+  overflow:hidden !important;
+}
+
 /* ----- Cards ----- */
 .card{
   background:rgba(17,17,26,.75);
@@ -136,6 +206,16 @@ ul{margin:10px 0 0;padding-left:18px;color:var(--m);line-height:1.6}
 }
 
 /* ----- Hero ----- */
+.hero{ position: relative; padding-top: 92px; }
+.hero-bg{
+  position:absolute; inset:0;
+  background:
+    linear-gradient(to bottom, rgba(7,10,16,.55), rgba(7,10,16,.92)),
+    url("IMG/hero.jpg") center/cover no-repeat;
+  filter: saturate(1.05) contrast(1.05);
+}
+.hero .c{ position: relative; z-index: 1; }
+
 .hero-title{max-width:22ch}
 .hero-card{position:relative;overflow:hidden}
 .hero-card:before{
@@ -258,10 +338,11 @@ textarea{min-height:110px;resize:vertical}
 }
 
 /* ----- Footer ----- */
-.footer{
-  padding:18px 20px;
-  color:var(--m);
-}
+  .footer{ padding: 40px 0 60px; border-top: 1px solid var(--stroke); }
+  .footer a{ color: var(--text); text-decoration:none; }
+  .footer a:hover{ color: var(--accent); }
+  .footer-grid{ display:flex; justify-content:space-between; gap:20px; flex-wrap:wrap; }
+
 
 /* ----- Accessibility ----- */
 .skip-link{
@@ -284,3 +365,13 @@ textarea{min-height:110px;resize:vertical}
   outline-offset: 3px;
   border-radius: 12px;
 }
+.reveal{ opacity: 0; transform: translateY(10px); transition: opacity .5s ease, transform .5s ease; }
+.reveal.is-visible{ opacity: 1; transform: translateY(0); }
+
+@media (prefers-reduced-motion: reduce){
+  .reveal{ transition:none; transform:none; opacity:1; }
+}
+.faq-item summary{ cursor:pointer; font-weight:700; }
+.faq-item p{ color: var(--muted); margin:10px 0 0; }
+.quote{ font-size: 16px; line-height:1.6; margin:0 0 10px; }
+
