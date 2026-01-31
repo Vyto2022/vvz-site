@@ -33,7 +33,10 @@
   <link rel="alternate" hreflang="en" href="https://vyto2022.github.io/vvz-site/index.html" />
   <link rel="alternate" hreflang="fr" href="https://vyto2022.github.io/vvz-site/index-fr.html" />
   <link rel="canonical" href="https://vyto2022.github.io/vvz-site/index.html" />
-
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
   <!-- Assets (cache-busted) -->
   <link rel="stylesheet" href="style.css?v=20260130230936" />
   <script src="script.js?v=20260130230936" defer></script>
@@ -74,9 +77,10 @@
 
   <main id="main">
     <!-- HERO -->
-    <section>
-      <div class="c">
-        <div class="card hero-card">
+          <section class="hero">
+  <div class="hero-bg" aria-hidden="true"></div>
+  <div class="c">
+    <div class="card hero-card reveal">
           <h1 class="hero-title">Local service landing pages that bring real leads.</h1>
 
           <p class="lead">
@@ -110,50 +114,47 @@
         <p class="lead">3 sample builds for local services — structure + conversion logic inside.</p>
 
         <div class="grid3 mt-14">
-          <a class="work-link" href="case-auto.html">
-            <article class="card work-card">
-              <img
-                class="work-thumb"
-                src="IMG/work-auto.png"
-                alt="Auto service landing preview"
-                loading="lazy"
-              />
-              <h3>Auto Service — Bookings</h3>
-              <p>Clear offer + trust stack + fast quote form (mobile-first).</p>
-              <p class="case-link">View case →</p>
-            </article>
-          </a>
+         <a class="case" href="case-auto.html">
+  <img class="case-img" src="IMG/work-auto.png" alt="Auto Service landing preview">
+  <div class="case-body">
+    <h3>Auto Service — Bookings</h3>
+    <p class="muted">Webflow • Lead Gen • Booking</p>
+    <ul class="case-points">
+      <li>New hero + CTA hierarchy</li>
+      <li>Trust stack + FAQ</li>
+      <li>Form flow simplified</li>
+    </ul>
+    <p class="case-meta">Result: +30–60% more inquiries (typical after cleanup)</p>
+  </div>
+</a>
 
-          <a class="work-link" href="case-detailing.html">
-            <article class="card work-card">
-              <img
-                class="work-thumb"
-                src="IMG/work-detailing.png"
-                alt="Car detailing landing preview"
-                loading="lazy"
-              />
-              <h3>Car Detailing — Premium</h3>
-              <p>Before/after first, package tiers, and “Book detailing” CTA.</p>
-              <p class="case-link">View case →</p>
-            </article>
-          </a>
+          <a class="case" href="case-auto.html">
+  <img class="case-img" src="IMG/work-auto.png" alt="Auto Service landing preview">
+  <div class="case-body">
+    <h3>Auto Service — Bookings</h3>
+    <p class="muted">Webflow • Lead Gen • Booking</p>
+    <ul class="case-points">
+      <li>New hero + CTA hierarchy</li>
+      <li>Trust stack + FAQ</li>
+      <li>Form flow simplified</li>
+    </ul>
+    <p class="case-meta">Result: +30–60% more inquiries (typical after cleanup)</p>
+  </div>
+</a>
 
-          <a class="work-link" href="case-tires.html">
-            <article class="card work-card">
-              <img
-                class="work-thumb"
-                src="IMG/work-tires.png"
-                alt="Tire shop landing preview"
-                loading="lazy"
-              />
-              <h3>Tire Shop — Seasonal Calls</h3>
-              <p>Phone-first CTA + seasonal offer + FAQ to reduce friction.</p>
-              <p class="case-link">View case →</p>
-            </article>
-          </a>
-        </div>
-      </div>
-    </section>
+     <a class="case" href="case-auto.html">
+  <img class="case-img" src="IMG/work-auto.png" alt="Auto Service landing preview">
+  <div class="case-body">
+    <h3>Auto Service — Bookings</h3>
+    <p class="muted">Webflow • Lead Gen • Booking</p>
+    <ul class="case-points">
+      <li>New hero + CTA hierarchy</li>
+      <li>Trust stack + FAQ</li>
+      <li>Form flow simplified</li>
+    </ul>
+    <p class="case-meta">Result: +30–60% more inquiries (typical after cleanup)</p>
+  </div>
+</a>
 
     <!-- SERVICES -->
     <section id="services">
@@ -244,6 +245,30 @@
         </div>
       </div>
     </section>
+    <!-- REVIEVS -->
+    <section id="reviews">
+  <div class="c">
+    <h2>Reviews</h2>
+    <p class="lead">A couple of real words beat ten promises.</p>
+
+    <div class="grid3 mt-14">
+      <div class="card reveal">
+        <p class="quote">“Clear structure, fast delivery, and the page finally started converting.”</p>
+        <p class="muted">— Alex, Auto service (Tarbes)</p>
+      </div>
+
+      <div class="card reveal">
+        <p class="quote">“The CTA and the offer became obvious. We got more calls in the first week.”</p>
+        <p class="muted">— Marina, Cleaning</p>
+      </div>
+
+      <div class="card reveal">
+        <p class="quote">“Looks premium, loads fast, and clients understand the packages.”</p>
+        <p class="muted">— Leo, Detailing</p>
+      </div>
+    </div>
+  </div>
+ </section>
 
     <!-- PRICING -->
     <section id="pricing">
@@ -333,9 +358,20 @@
         </div>
       </div>
     </section>
-
+    <!-- ABOUT -->
+   <section id="about">
+  <div class="c">
+    <div class="card reveal" style="display:flex;gap:18px;align-items:center;flex-wrap:wrap">
+      <img src="IMG/me.jpg" alt="VVZ Studio" style="width:64px;height:64px;border-radius:999px;object-fit:cover;border:1px solid var(--stroke)">
+      <div style="min-width:240px">
+        <h2 style="margin:0 0 6px">Hi, I’m Vyto</h2>
+        <p class="muted" style="margin:0">I build conversion-focused landing pages for local services — clean structure, strong offer, and fast delivery.</p>
+      </div>
+    </div>
+  </div>
+</section>
     <!-- CONTACT -->
-    <section id="contact">
+    <secti1on id="contact">
       <div class="c">
         <h2>Contact</h2>
         <p class="lead">
@@ -442,9 +478,21 @@
       <a class="btn" href="https://t.me/vyto1501" target="_blank" rel="noopener">Telegram</a>
     </div>
   </div>
+  <footer class="footer">
+  <div class="c">
+    <div class="footer-grid">
+      <div>
+        <strong>VVZ Studio</strong>
+        <p class="muted">Landing pages for local services. Conversion-first.</p>
+      </div>
+      <div>
+        <p><a href="#work">Work</a> · <a href="#services">Services</a> · <a href="#pricing">Pricing</a></p>
+        <p class="muted">© 2026 VVZ Studio</p>
+      </div>
+    </div>
+  </div>
+</footer>
 
-  <footer class="c footer">
-    <p>© <span id="y"></span> VVZ Studio</p>
-  </footer>
 </body>
 </html>
+
