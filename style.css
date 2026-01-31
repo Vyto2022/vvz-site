@@ -342,7 +342,10 @@ textarea{resize: vertical; min-height: 120px}
 .note .sep{opacity:.6; margin:0 6px}
 
 .quick{
-  position:sticky; top:90px;
+  /* Align with the left contact card (no sticky offset) */
+  position: relative;
+  top: auto;
+  align-self: start;
   border:1px solid var(--line);
   background: rgba(17,26,37,.50);
   border-radius: var(--radius);
