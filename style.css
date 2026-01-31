@@ -337,7 +337,9 @@ h1{
   outline:none;
 }
 textarea{resize: vertical; min-height: 120px}
-.note{color: var(--muted); font-size: 13px; margin:10px 0 0}
+.note{color: var(--muted); font-size: 13px; margin:10px 0 0; line-height:1.4}
+.note a{color: var(--text); text-decoration: underline; text-underline-offset: 3px}
+.note .sep{opacity:.6; margin:0 6px}
 
 .quick{
   position:sticky; top:90px;
