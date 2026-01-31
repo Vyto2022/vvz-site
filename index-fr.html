@@ -223,73 +223,82 @@
       </div>
     </div>
   </section>
-
-  <section id="contact">
-    <div class="c">
+   <section id="contact">
+  <div class="c">
+    <div class="sectionHead">
       <h2>Contact</h2>
-      <p class="lead">Dites-moi votre activité et votre ville — je répondrai avec un plan.</p>
+      <p class="lead">Dis-moi ce que tu fais et dans quelle ville tu travailles — je réponds avec un plan.</p>
+    </div>
 
-      <div class="contactGrid" style="margin-top:14px">
-        <div class="card">
-          <h3>Contact rapide</h3>
-          <p>Choisissez un canal — je réponds vite.</p>
+    <div class="contactGrid">
+      <!-- Left: Fast contact -->
+      <aside class="card contactAside">
+        <h3>Contact rapide</h3>
+        <p class="muted">Choisis un canal — je réponds vite.</p>
 
-          <div class="cta-row">
-            <a class="btn btnIcon" href="https://t.me/vyto1501" target="_blank" rel="noopener">
-              <svg class="cta-ic" aria-hidden="true"><use href="#i-telegram"></use></svg>
-              Telegram
-            </a>
-            <a class="btn btnIcon" href="https://wa.me/33XXXXXXXXX" target="_blank" rel="noopener">
-              <svg class="cta-ic" aria-hidden="true"><use href="#i-whatsapp"></use></svg>
-              WhatsApp
-            </a>
-            <a class="btn btnIcon" href="mailto:nvzgardan@hotmail.com">
-              <svg class="cta-ic" aria-hidden="true"><use href="#i-email"></use></svg>
-              Email
-            </a>
-          </div>
+        <div class="cta-row">
+          <a class="btn btnIcon" href="https://t.me/vyto1501" target="_blank" rel="noopener">
+            <svg class="cta-ic" aria-hidden="true"><use href="#i-telegram"></use></svg>
+            Telegram
+          </a>
 
-          <p class="note">Vous préférez le formulaire ? Il va vers Google Sheets.</p>
+          <a class="btn btnIcon" href="https://wa.me/33XXXXXXXXX" target="_blank" rel="noopener">
+            <svg class="cta-ic" aria-hidden="true"><use href="#i-whatsapp"></use></svg>
+            WhatsApp
+          </a>
+
+          <a class="btn btnIcon" href="mailto:nvzgardan@hotmail.com">
+            <svg class="cta-ic" aria-hidden="true"><use href="#i-email"></use></svg>
+            Email
+          </a>
         </div>
 
-        <form id="quoteForm" class="card" method="POST" action="#">
-          <h3>Demander un devis</h3>
+        <div class="miniNote">
+          Tu peux utiliser le formulaire — les demandes vont dans Google Sheets.
+        </div>
+      </aside>
 
-          <div class="formRow">
-            <div class="field">
-              <label>Nom</label>
-              <input name="name" required placeholder="Votre nom">
-            </div>
-            <div class="field">
-              <label>Email</label>
-              <input name="email" type="email" required placeholder="vous@email.com">
-            </div>
+      <!-- Right: Form -->
+      <form id="quoteForm" class="card formCard" method="POST" action="#" novalidate>
+        <h3>Demander un devis</h3>
+
+        <div class="formGrid">
+          <div class="field">
+            <label for="name">Nom</label>
+            <input id="name" name="name" type="text" placeholder="Votre nom" autocomplete="name" required>
           </div>
 
-          <div class="field full">
-            <label>Projet</label>
-            <select name="project" required>
-              <option>Start</option>
-              <option>Pro (Le plus choisi)</option>
-              <option>Fix (48h)</option>
+          <div class="field">
+            <label for="email">Email</label>
+            <input id="email" name="email" type="email" placeholder="you@email.com" autocomplete="email" required>
+          </div>
+
+          <div class="field fieldWide">
+            <label for="project">Offre</label>
+            <select id="project" name="project" required>
+              <option value="Start">Start</option>
+              <option value="Pro">Pro</option>
+              <option value="Fix">Fix</option>
             </select>
           </div>
 
-          <div class="field full">
-            <label>Message</label>
-            <textarea name="message" rows="5" required placeholder="Exemple : J'ai un lavage auto à Lyon, je veux plus de réservations."></textarea>
+          <div class="field fieldWide">
+            <label for="message">Message</label>
+            <textarea id="message" name="message" rows="6" placeholder="Exemple : j’ai un lavage auto à Lyon, je veux plus de réservations." required></textarea>
           </div>
+        </div>
 
-          <div class="formActions">
-            <button class="btn btnP" type="submit">Envoyer</button>
-            <a class="btn" href="https://t.me/vyto1501" target="_blank" rel="noopener">Ou message sur Telegram</a>
-          </div>
+        <div class="formActions">
+          <button class="btn btnP" type="submit">Envoyer</button>
+          <a class="btn" href="https://t.me/vyto1501" target="_blank" rel="noopener">Ou écrire sur Telegram</a>
+        </div>
 
-          <div id="formStatus" class="status" aria-live="polite"></div>
-        </form>
-      </div>
+        <p class="formHint">Google Sheets : ajoute l’URL Apps Script dans <code>script.js</code> → <code>CONFIG.googleScriptUrl</code>.</p>
+        <div id="formStatus" class="formStatus" aria-live="polite"></div>
+      </form>
     </div>
-  </section>
+  </div>
+ </section>
 
   <footer class="c" style="padding:18px 20px;color:var(--m)">
     <p style="margin:0">© <span id="y"></span> VVZ Studio</p>
