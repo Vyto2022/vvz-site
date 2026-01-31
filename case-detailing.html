@@ -1,63 +1,68 @@
 <!doctype html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Case Study — Car Detailing Landing | VVZ Studio</title>
-  <link rel="icon" type="image/png" sizes="32x32" href="IMG/favicon.png">
-  <link rel="stylesheet" href="case.css?v=1">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Detailing — Before/After — Case study | VVZ Studio</title>
+  <meta name="description" content="Case study: Detailing — Before/After. Structure, CTA, trust blocks.">
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <header class="top">
-    <div class="c" style="display:flex;justify-content:space-between;gap:10px;align-items:center;flex-wrap:wrap">
-      <a class="btn" href="index.html#work">← Back</a>
-      <a class="btn btnP" href="index.html#contact">Get a quote</a>
+<header class="header">
+  <div class="container">
+    <div class="nav">
+      <a class="brand" href="index.html"><span class="dot"></span><span>VVZ Studio</span></a>
+      <nav class="menu">
+        <a href="index.html#work">Back</a>
+        <a href="index.html#contact" class="btn">Get a quote</a>
+      </nav>
+      <button class="burger" type="button" data-burger aria-label="Menu" aria-expanded="false">
+        <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+          <path d="M4 7h16M4 12h16M4 17h16" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+        </svg>
+      </button>
     </div>
-  </header>
-
-  <main class="c">
-    <h1>Case Study: Car Detailing — Premium Before/After</h1>
-    <p>Goal: sell a premium service via visuals first (before/after), packages, and trust — then capture leads fast.</p>
-
-    <div class="card">
-      <div class="thumb"></div>
-      <p style="margin-top:10px">Placeholder preview. Replace with a real screenshot later.</p>
+    <div class="mobile" data-mobile>
+      <a href="index.html#work">Back</a>
+      <a href="index.html#contact">Get a quote</a>
     </div>
+  </div>
+</header>
 
-    <div class="grid">
-      <div class="card">
-        <h2>What was done</h2>
-        <ul>
-          <li>Hero with premium positioning + “Book detailing” CTA</li>
-          <li>Before/after section above pricing</li>
-          <li>Packages: Basic / Standard / Premium with inclusions</li>
-          <li>Trust stack: reviews, guarantees, process clarity</li>
-        </ul>
+<main>
+  <section class="hero">
+    <div class="container hero-grid">
+      <div>
+        <div class="kicker"><span class="spark"></span>Case study</div>
+        <h1>Detailing — Before/After</h1>
+        <p class="lead">Premium positioning + proof-heavy layout.</p>
+
+        <div class="card" style="margin-top:16px">
+          <h3 style="margin:0 0 10px">What’s inside</h3>
+          <ul class="ul"><li>Before/After emphasis</li><li>Premium offer framing</li><li>Social proof placement</li><li>CTA hierarchy for mobile</li></ul>
+        </div>
+
+        <div class="cta-row">
+          <a class="btn" href="index.html#contact">Get a quote</a>
+          <a class="btn ghost" href="index.html#work">See other cases</a>
+        </div>
       </div>
 
-      <div class="card">
-        <h2>Conversion logic</h2>
-        <ul>
-          <li>CTA repeated after gallery and after pricing</li>
-          <li>“What’s included” removes doubts</li>
-          <li>Social proof sits next to CTA</li>
-          <li>Short form + optional message = faster submits</li>
-        </ul>
-      </div>
+      <aside class="hero-card">
+        <h3>Preview</h3>
+        <p>Same blocks you can reuse for any niche.</p>
+        <div class="proof"><img src="IMG/work-detailing.png" alt="Detailing — Before/After"></div>
+      </aside>
     </div>
+  </section>
+</main>
 
-    <div class="card">
-      <h2>Next improvements</h2>
-      <ul>
-        <li>Add real client photos + short testimonials</li>
-        <li>Enable add-ons (ceramic, interior, glass) upsell</li>
-        <li>Track CTA clicks and form submits</li>
-      </ul>
-    </div>
+<footer class="footer">
+  <div class="container">
+    <small>© VVZ Studio</small>
+  </div>
+</footer>
 
-    <div style="padding:24px 0">
-      <a class="btn btnP" href="index.html#contact">Request a similar landing</a>
-    </div>
-  </main>
+<script src="script.js" defer></script>
 </body>
 </html>
