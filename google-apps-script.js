@@ -15,7 +15,7 @@ function doPost(e) {
   var sheet = ss.getSheetByName('Leads') || ss.insertSheet('Leads');
 
   if (sheet.getLastRow() === 0) {
-    sheet.appendRow(['timestamp','name','email','project','message']);
+    sheet.appendRow(['timestamp','name','email','phone','city','project','message']);
   }
 
   var p = (e && e.parameter) ? e.parameter : {};
@@ -23,6 +23,8 @@ function doPost(e) {
     new Date().toISOString(),
     p.name || '',
     p.email || '',
+    p.phone || '',
+    p.city || '',
     p.project || '',
     p.message || ''
   ]);
