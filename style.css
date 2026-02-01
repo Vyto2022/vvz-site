@@ -119,9 +119,9 @@ section{padding:44px 0; scroll-margin-top:92px;}
 .grid2{display:grid;grid-template-columns:1fr 1fr;gap:14px}
 .lbl{display:block;margin-top:10px;color:var(--m);font-weight:800;font-size:12px}
 .muted{color:var(--m);line-height:1.6}
-.contactGrid{display:grid;grid-template-columns:1fr 1.35fr;gap:14px;align-items:stretch}
+.contactGrid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px;align-items:stretch}
 .contactAside,.formCard{display:flex;flex-direction:column;min-height:430px}
-.contactAside{position:sticky;top:96px;align-self:start}
+.contactAside{position:static;top:auto;align-self:stretch}
 .ctaList{display:grid;gap:10px;margin-top:12px}
 .contactAside .btn{justify-content:flex-start}
 .miniNote{margin-top:auto;color:var(--m);font-size:12px;opacity:.92}
@@ -145,7 +145,7 @@ textarea{resize:vertical}
   .navRight{justify-self:center}
 }
 @media(max-width:860px){
-  .contactGrid{grid-template-columns:1fr}
+  .contactGrid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px;align-items:stretch}
   .contactAside{position:static;top:auto}
   .contactAside,.formCard{min-height:auto}
 
@@ -161,43 +161,7 @@ textarea{resize:vertical}
 .heroImg{width:100%;max-width:560px;height:auto;border-radius:16px;border:1px solid rgba(38,38,58,.9);display:block}
 .workThumb{width:100%;height:150px;object-fit:cover;border-radius:14px;border:1px solid rgba(38,38,58,.9);margin-bottom:10px;background:rgba(17,17,26,.55)}
 .cta-ic{width:16px;height:16px;display:inline-block;vertical-align:-2px;margin-right:6px}
-/* === Contact symmetry hard-fix === */
-.contact-grid,
-.contact__grid,
-.contact-row,
-.contact__row {
-  display: grid !important;
-  grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
-  gap: 16px !important;
-  align-items: stretch !important;
-}
 
-.contact-grid > *,
-.contact__grid > *,
-.contact-row > *,
-.contact__row > * {
-  min-width: 0;
-}
-
-.contact-card,
-.contact__card,
-.contact-box {
-  height: 100% !important;
-  display: flex !important;
-  flex-direction: column !important;
-}
-
-.contact-card__foot,
-.contact__foot,
-.contact-footnote {
-  margin-top: auto !important;
-}
-
-@media (max-width: 820px) {
-  .contact-grid,
-  .contact__grid,
-  .contact-row,
-  .contact__row {
-    grid-template-columns: 1fr !important;
-  }
-}
+/* Contact symmetry hard-fix */
+.contactGrid > *{min-width:0}
+.contactAside,.formCard{height:100%}
