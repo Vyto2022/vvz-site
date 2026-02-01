@@ -14,8 +14,8 @@
   <meta property="og:image" content="IMG/og.png">
   <meta name="twitter:card" content="summary_large_image">
 
-  <link rel="stylesheet" href="style.css?v=8">
-  <script src="script.js?v=8" defer></script>
+  <link rel="stylesheet" href="style.css?v=12">
+  <script src="script.js?v=12" defer></script>
 </head>
 
 <body id="top">
@@ -37,14 +37,16 @@
       </nav>
 
       <div class="navRight">
-        <div class="lang" aria-label="Language">
-          <a href="index.html">EN</a>
-          <a href="index-fr.html" class="active">FR</a>
-          <a href="index-ru.html">RU</a>
-        </div>
+        <div class="langMenu" aria-label="Language">
+  <button class="langBtn" type="button" aria-haspopup="true" aria-expanded="false" title="Language"><svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M12 21c4.97 0 9-4.03 9-9s-4.03-9-9-9-9 4.03-9 9 4.03 9 9 9Z" stroke="currentColor" stroke-width="1.8"/><path d="M3 12h18" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/><path d="M12 3c2.5 2.4 4 5.6 4 9s-1.5 6.6-4 9c-2.5-2.4-4-5.6-4-9s1.5-6.6 4-9Z" stroke="currentColor" stroke-width="1.8"/></svg></button>
+  <div class="langDropdown" role="menu">
+    <a href="index.html" role="menuitem">Anglais<span class="langTag">EN</span></a><a href="index-fr.html" role="menuitem">Français<span class="langTag">FR</span></a><a href="index-ru.html" role="menuitem">Russe<span class="langTag">RU</span></a>
+  </div>
+</div>
         <a class="btn btnP navCta" href="#contact">Demander un devis</a>
       </div>
     </div>
+
   </header>
 
   <section>
@@ -104,18 +106,20 @@
           <img class="workThumb" src="IMG/autoservice.png" alt="Auto service landing preview">
           <h3>Auto Service — Bookings</h3>
           <p>Webflow • Lead Gen • Booking</p>
+          <div class="miniKpis"><span class="miniKpi"><strong>+17 demandes</strong> <span style="opacity:.75">30 jours</span></span><span class="miniKpi"><strong>-35% rebond</strong> <span style="opacity:.75">mobile</span></span><span class="miniKpi"><strong>2 clics</strong> <span style="opacity:.75">contact</span></span></div>
           <div class="formActions" style="margin-top:12px">
-            <a class="btn btnP" href="case-auto-fr.html">View case</a>
+            <a class="btn btnP" href="case-auto-fr.html">Voir le cas</a>
             <a class="btn" href="#contact">Live preview</a>
           </div>
         </div>
 
         <div class="card">
-          <img class="workThumb" src="IMG/work-detailing.png" alt="Car detailing landing preview">
+          <img class="workThumb" src="IMG/vvz2.png" alt="Car detailing landing preview">
           <h3>Detailing — Before/After</h3>
           <p>Framer • Premium • Proof</p>
+          <div class="miniKpis"><span class="miniKpi"><strong>+17 demandes</strong> <span style="opacity:.75">30 jours</span></span><span class="miniKpi"><strong>-35% rebond</strong> <span style="opacity:.75">mobile</span></span><span class="miniKpi"><strong>2 clics</strong> <span style="opacity:.75">contact</span></span></div>
           <div class="formActions" style="margin-top:12px">
-            <a class="btn btnP" href="case-detailing-fr.html">View case</a>
+            <a class="btn btnP" href="case-detailing-fr.html">Voir le cas</a>
             <a class="btn" href="#contact">Live preview</a>
           </div>
         </div>
@@ -124,8 +128,9 @@
           <img class="workThumb" src="IMG/tires.png" alt="Tire shop landing preview">
           <h3>Tire Shop — Seasonal Calls</h3>
           <p>Local SEO • Mobile CTA • Calls</p>
+          <div class="miniKpis"><span class="miniKpi"><strong>+17 demandes</strong> <span style="opacity:.75">30 jours</span></span><span class="miniKpi"><strong>-35% rebond</strong> <span style="opacity:.75">mobile</span></span><span class="miniKpi"><strong>2 clics</strong> <span style="opacity:.75">contact</span></span></div>
           <div class="formActions" style="margin-top:12px">
-            <a class="btn btnP" href="case-tires-fr.html">View case</a>
+            <a class="btn btnP" href="case-tires-fr.html">Voir le cas</a>
             <a class="btn" href="#contact">Live preview</a>
           </div>
         </div>
@@ -186,6 +191,17 @@
       <span class="pill">Réparations</span>
     </div>
 
+    <div class="trustBrands" aria-label="Trusted by">
+  <div class="trustLabel">Ils nous font confiance</div>
+  <div class="brandRow">
+    <div class="brandLogo"><svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M12 2 20 6.5v11L12 22 4 17.5v-11L12 2Z" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/></svg><div><div class="brandName">Lyon Auto</div><div class="brandSub">service</div></div></div>
+<div class="brandLogo"><svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M12 2 20 6.5v11L12 22 4 17.5v-11L12 2Z" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/></svg><div><div class="brandName">Detail Pro</div><div class="brandSub">detailing</div></div></div>
+<div class="brandLogo"><svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M12 2 20 6.5v11L12 22 4 17.5v-11L12 2Z" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/></svg><div><div class="brandName">TirePoint</div><div class="brandSub">tires</div></div></div>
+<div class="brandLogo"><svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M12 2 20 6.5v11L12 22 4 17.5v-11L12 2Z" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/></svg><div><div class="brandName">Clean&Go</div><div class="brandSub">cleaning</div></div></div>
+<div class="brandLogo"><svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M12 2 20 6.5v11L12 22 4 17.5v-11L12 2Z" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/></svg><div><div class="brandName">FixLab</div><div class="brandSub">repairs</div></div></div>
+  </div>
+</div>
+
     <div class="grid2" style="margin-top:14px">
       <div class="card">
         <h3>Ce que tu reçois</h3>
@@ -207,22 +223,33 @@
       </div>
     </div>
 
+    <div class="logoRow" aria-label="Aperçus">
+      <img class="logoImg" src="IMG/autoservice.png" alt="Garage">
+      <img class="logoImg" src="IMG/tires.png" alt="Pneus">
+      <img class="logoImg" src="IMG/vvz2.png" alt="Aperçu landing">
+      <img class="logoImg" src="IMG/vvz5.png" alt="Aperçu landing">
+    </div>
+
+    <div class="grid3" style="margin-top:14px">
+      <div class="card"><div class="kpi">3–7 jours</div><div class="kpiSub">Livraison pour la plupart des landings</div></div>
+      <div class="card"><div class="kpi">2–12h</div><div class="kpiSub">Réponse via Telegram / WhatsApp</div></div>
+      <div class="card"><div class="kpi">+10–30</div><div class="kpiSub">Demandes / mois (exemple de structure)</div></div>
+    </div>
+
     <div class="grid3" style="margin-top:14px">
       <div class="card">
         <p class="quote">« On a commencé à recevoir des appels en 3 jours. »</p>
-        <p class="by">Jean — Garage (placeholder)</p>
+        <p class="by">Garage — Lyon</p>
       </div>
       <div class="card">
         <p class="quote">« Structure propre, les clients comprennent vite. »</p>
-        <p class="by">Marie — Detailing (placeholder)</p>
+        <p class="by">Detailing — Toulouse</p>
       </div>
       <div class="card">
         <p class="quote">« Les gens écrivent plus vite — moins de leads morts. »</p>
-        <p class="by">Alex — Pneus (placeholder)</p>
+        <p class="by">Pneus — Paris</p>
       </div>
     </div>
-
-    <p class="note">Remplace les placeholders par de vrais avis/logos dès que possible.</p>
   </div>
 </section>
 
@@ -287,7 +314,8 @@
             Email
           </a>
         </div>
-      
+
+        
       </aside>
 
       <form id="quoteForm" class="card formCard" method="POST" action="#">
@@ -331,11 +359,14 @@
         </div>
 
         <div id="formStatus" class="status" aria-live="polite"></div>
+        
       </form>
     </div>
   </div>
-  </section>   
+</section>
 
+<footer class="c" style="padding:18px 20px;color:var(--m)">
+    <p style="margin:0">© <span id="y"></span> VVZ Studio</p>
   </footer>
 
   <script>

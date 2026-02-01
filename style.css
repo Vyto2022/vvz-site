@@ -119,12 +119,13 @@ section{padding:44px 0; scroll-margin-top:92px;}
 .grid2{display:grid;grid-template-columns:1fr 1fr;gap:14px}
 .lbl{display:block;margin-top:10px;color:var(--m);font-weight:800;font-size:12px}
 .muted{color:var(--m);line-height:1.6}
-.contactGrid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px;align-items:stretch}
+.contactGrid{display:grid;grid-template-columns:1fr 1fr;gap:14px;align-items:stretch}
 .contactAside,.formCard{display:flex;flex-direction:column;min-height:430px}
+/* Symmetry > sticky: keep both cards equal height on desktop */
 .contactAside{position:static;top:auto;align-self:stretch}
 .ctaList{display:grid;gap:10px;margin-top:12px}
 .contactAside .btn{justify-content:flex-start}
-.miniNote{margin-top:auto;color:var(--m);font-size:12px;opacity:.92}
+.miniNote{display:none !important}
 input,select,textarea{
   width:100%;margin-top:6px;padding:10px 12px;
   border-radius:12px;border:1px solid rgba(38,38,58,.9);
@@ -139,13 +140,20 @@ textarea{resize:vertical}
 .status{margin-top:10px;font-size:13px;color:var(--m)}
 .status.ok{color:#78f0c3}
 .status.err{color:#ff8aa1}
+
+/* Trust visuals */
+.logoRow{display:flex;flex-wrap:wrap;gap:10px;margin-top:14px;align-items:center}
+.logoImg{height:38px;width:auto;max-width:140px;border-radius:12px;
+  border:1px solid rgba(38,38,58,.9);background:rgba(11,11,15,.35);padding:6px;opacity:.92}
+.kpi{font-weight:900;font-size:22px;letter-spacing:-.02em}
+.kpiSub{margin-top:6px;color:var(--m);font-size:13px}
 @media(max-width:1120px){
   .navbar{grid-template-columns:1fr; justify-items:center}
   .brand{justify-self:center}
   .navRight{justify-self:center}
 }
 @media(max-width:860px){
-  .contactGrid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px;align-items:stretch}
+  .contactGrid{grid-template-columns:1fr}
   .contactAside{position:static;top:auto}
   .contactAside,.formCard{min-height:auto}
 
@@ -162,6 +170,49 @@ textarea{resize:vertical}
 .workThumb{width:100%;height:150px;object-fit:cover;border-radius:14px;border:1px solid rgba(38,38,58,.9);margin-bottom:10px;background:rgba(17,17,26,.55)}
 .cta-ic{width:16px;height:16px;display:inline-block;vertical-align:-2px;margin-right:6px}
 
-/* Contact symmetry hard-fix */
-.contactGrid > *{min-width:0}
-.contactAside,.formCard{height:100%}
+
+/* === v11: anchor offset (avoid header covering sections) === */
+:root{ --navH: 96px; }
+html{ scroll-behavior:smooth; scroll-padding-top: var(--navH); }
+section{ scroll-margin-top: var(--navH); }
+
+/* === v11: language globe dropdown === */
+.langMenu{ position:relative; display:inline-flex; align-items:center; }
+.langBtn{ width:38px; height:38px; border-radius:999px; display:inline-flex; align-items:center; justify-content:center;
+  border:1px solid rgba(255,255,255,.16); background:rgba(255,255,255,.04); color:rgba(255,255,255,.92);
+}
+.langBtn:hover{ background:rgba(255,255,255,.07); }
+.langBtn svg{ width:18px; height:18px; opacity:.9; }
+.langDropdown{ display:none; position:absolute; right:0; top:calc(100% + 10px); min-width:170px;
+  padding:8px; border-radius:14px; border:1px solid rgba(255,255,255,.14);
+  background:rgba(13,13,18,.92); backdrop-filter: blur(12px);
+  box-shadow:0 14px 40px rgba(0,0,0,.35);
+}
+.langDropdown a{ display:flex; justify-content:space-between; gap:12px; padding:9px 10px; border-radius:10px;
+  color:rgba(255,255,255,.92); text-decoration:none; font-size:.95rem;
+}
+.langDropdown a:hover{ background:rgba(255,255,255,.08); }
+.langMenu:hover .langDropdown{ display:block; }
+.langMenu.open .langDropdown{ display:block; }
+.langTag{ opacity:.75; font-size:.85rem; }
+
+/* === v11: "Trusted by" logos row === */
+.trustBrands{ margin-top:14px; padding:14px; border:1px solid rgba(255,255,255,.10); border-radius:18px;
+  background:rgba(255,255,255,.03);
+}
+.trustBrands .trustLabel{ display:flex; align-items:center; gap:10px; color:rgba(255,255,255,.82); font-size:.95rem; }
+.trustBrands .trustLabel:before{ content:""; width:10px; height:10px; border-radius:999px; background:linear-gradient(135deg,#7c5cff,#17b2ff); opacity:.9; }
+.brandRow{ display:flex; flex-wrap:wrap; gap:10px 14px; margin-top:10px; }
+.brandLogo{ display:flex; align-items:center; gap:10px; padding:10px 12px; border-radius:14px;
+  border:1px solid rgba(255,255,255,.10); background:rgba(255,255,255,.02);
+  color:rgba(255,255,255,.86);
+}
+.brandLogo svg{ width:22px; height:22px; opacity:.9; }
+.brandName{ font-weight:600; letter-spacing:.2px; }
+.brandSub{ opacity:.68; font-size:.85rem; }
+
+/* === v11: mini-case KPIs inside Work cards === */
+.miniKpis{ display:flex; flex-wrap:wrap; gap:8px; margin-top:10px; }
+.miniKpi{ padding:6px 10px; border-radius:999px; border:1px solid rgba(255,255,255,.14);
+  background:rgba(255,255,255,.03); font-size:.86rem; color:rgba(255,255,255,.86);
+}

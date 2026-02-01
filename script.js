@@ -7,7 +7,7 @@
 const CONFIG = {
   submitMode: 'googlesheets', // 'formspree' | 'googlesheets'
   formspreeEndpoint: 'https://formspree.io/f/xjgwkwgo',
-  googleScriptUrl: 'https://script.google.com/macros/s/AKfycbyQY6ipT74ZUNR2XW2bEUyTiH1j27rXnxKRxIaaowgFBsYbqkGKLzJ967XGIofLK_n-/exec', // https://script.google.com/macros/s/XXXXX/exec
+  googleScriptUrl: 'PASTE_YOUR_GOOGLE_SCRIPT_URL_HERE', // https://script.google.com/macros/s/XXXXX/exec
   thankYouPage: 'thanks.html',
 };
 
@@ -82,4 +82,30 @@ function initForm(){
 document.addEventListener('DOMContentLoaded', () => {
   initHashOffset();
   initForm();
+});
+
+
+// v11: language dropdown (globe)
+document.addEventListener('DOMContentLoaded', () => {
+  const menus = Array.from(document.querySelectorAll('.langMenu'));
+  menus.forEach(menu => {
+    const btn = menu.querySelector('.langBtn');
+    if (!btn) return;
+    btn.addEventListener('click', (e) => {
+      e.preventDefault();
+      e.stopPropagation();
+      // toggle
+      const isOpen = menu.classList.contains('open');
+      menus.forEach(m => m.classList.remove('open'));
+      if (!isOpen) menu.classList.add('open');
+      btn.setAttribute('aria-expanded', String(!isOpen));
+    });
+  });
+  document.addEventListener('click', () => {
+    menus.forEach(m => {
+      m.classList.remove('open');
+      const b = m.querySelector('.langBtn');
+      if (b) b.setAttribute('aria-expanded', 'false');
+    });
+  });
 });

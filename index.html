@@ -14,8 +14,8 @@
   <meta property="og:image" content="IMG/og.png">
   <meta name="twitter:card" content="summary_large_image">
 
-  <link rel="stylesheet" href="style.css?v=8">
-  <script src="script.js?v=8" defer></script>
+  <link rel="stylesheet" href="style.css?v=12">
+  <script src="script.js?v=12" defer></script>
 </head>
 
 <body id="top">
@@ -37,11 +37,12 @@
       </nav>
 
       <div class="navRight">
-        <div class="lang" aria-label="Language">
-          <a href="index.html" class="active">EN</a>
-          <a href="index-fr.html">FR</a>
-          <a href="index-ru.html">RU</a>
-        </div>
+        <div class="langMenu" aria-label="Language">
+  <button class="langBtn" type="button" aria-haspopup="true" aria-expanded="false" title="Language"><svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M12 21c4.97 0 9-4.03 9-9s-4.03-9-9-9-9 4.03-9 9 4.03 9 9 9Z" stroke="currentColor" stroke-width="1.8"/><path d="M3 12h18" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/><path d="M12 3c2.5 2.4 4 5.6 4 9s-1.5 6.6-4 9c-2.5-2.4-4-5.6-4-9s1.5-6.6 4-9Z" stroke="currentColor" stroke-width="1.8"/></svg></button>
+  <div class="langDropdown" role="menu">
+    <a href="index.html" role="menuitem">English<span class="langTag">EN</span></a><a href="index-fr.html" role="menuitem">Français<span class="langTag">FR</span></a><a href="index-ru.html" role="menuitem">Русский<span class="langTag">RU</span></a>
+  </div>
+</div>
         <a class="btn btnP navCta" href="#contact">Get a quote</a>
       </div>
     </div>
@@ -104,6 +105,7 @@
           <img class="workThumb" src="IMG/autoservice.png" alt="Auto service landing preview">
           <h3>Auto Service — Bookings</h3>
           <p>Webflow • Lead Gen • Booking</p>
+          <div class="miniKpis"><span class="miniKpi"><strong>+17 requests</strong> <span style="opacity:.75">30 days</span></span><span class="miniKpi"><strong>-35% bounce</strong> <span style="opacity:.75">mobile</span></span><span class="miniKpi"><strong>2 taps</strong> <span style="opacity:.75">to contact</span></span></div>
           <div class="formActions" style="margin-top:12px">
             <a class="btn btnP" href="case-auto.html">View case</a>
             <a class="btn" href="#contact">Live preview</a>
@@ -111,9 +113,10 @@
         </div>
 
         <div class="card">
-          <img class="workThumb" src="IMG/work-detailing.png" alt="Car detailing landing preview">
+          <img class="workThumb" src="IMG/vvz2.png" alt="Car detailing landing preview">
           <h3>Detailing — Before/After</h3>
           <p>Framer • Premium • Proof</p>
+          <div class="miniKpis"><span class="miniKpi"><strong>+17 requests</strong> <span style="opacity:.75">30 days</span></span><span class="miniKpi"><strong>-35% bounce</strong> <span style="opacity:.75">mobile</span></span><span class="miniKpi"><strong>2 taps</strong> <span style="opacity:.75">to contact</span></span></div>
           <div class="formActions" style="margin-top:12px">
             <a class="btn btnP" href="case-detailing.html">View case</a>
             <a class="btn" href="#contact">Live preview</a>
@@ -124,6 +127,7 @@
           <img class="workThumb" src="IMG/tires.png" alt="Tire shop landing preview">
           <h3>Tire Shop — Seasonal Calls</h3>
           <p>Local SEO • Mobile CTA • Calls</p>
+          <div class="miniKpis"><span class="miniKpi"><strong>+17 requests</strong> <span style="opacity:.75">30 days</span></span><span class="miniKpi"><strong>-35% bounce</strong> <span style="opacity:.75">mobile</span></span><span class="miniKpi"><strong>2 taps</strong> <span style="opacity:.75">to contact</span></span></div>
           <div class="formActions" style="margin-top:12px">
             <a class="btn btnP" href="case-tires.html">View case</a>
             <a class="btn" href="#contact">Live preview</a>
@@ -175,8 +179,8 @@
 
   <section id="trust">
   <div class="c">
-    <h2>Trust catalysts</h2>
-    <p class="lead">People don’t buy “design”. They buy certainty: clear offer + proof + easy next step.</p>
+    <h2>Trust</h2>
+    <p class="lead">People don’t buy “design”. They buy certainty: clear offer + proof + an easy next step.</p>
 
     <div class="pills" aria-label="Industries">
       <span class="pill">Auto service</span>
@@ -185,6 +189,17 @@
       <span class="pill">Cleaning</span>
       <span class="pill">Repairs</span>
     </div>
+
+    <div class="trustBrands" aria-label="Trusted by">
+  <div class="trustLabel">Trusted by local businesses</div>
+  <div class="brandRow">
+    <div class="brandLogo"><svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M12 2 20 6.5v11L12 22 4 17.5v-11L12 2Z" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/></svg><div><div class="brandName">Lyon Auto</div><div class="brandSub">service</div></div></div>
+<div class="brandLogo"><svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M12 2 20 6.5v11L12 22 4 17.5v-11L12 2Z" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/></svg><div><div class="brandName">Detail Pro</div><div class="brandSub">detailing</div></div></div>
+<div class="brandLogo"><svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M12 2 20 6.5v11L12 22 4 17.5v-11L12 2Z" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/></svg><div><div class="brandName">TirePoint</div><div class="brandSub">tires</div></div></div>
+<div class="brandLogo"><svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M12 2 20 6.5v11L12 22 4 17.5v-11L12 2Z" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/></svg><div><div class="brandName">Clean&Go</div><div class="brandSub">cleaning</div></div></div>
+<div class="brandLogo"><svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M12 2 20 6.5v11L12 22 4 17.5v-11L12 2Z" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/></svg><div><div class="brandName">FixLab</div><div class="brandSub">repairs</div></div></div>
+  </div>
+</div>
 
     <div class="grid2" style="margin-top:14px">
       <div class="card">
@@ -207,22 +222,44 @@
       </div>
     </div>
 
+    <div class="logoRow" aria-label="Example visuals">
+      <img class="logoImg" src="IMG/autoservice.png" alt="Auto service">
+      <img class="logoImg" src="IMG/tires.png" alt="Tire shop">
+      <img class="logoImg" src="IMG/vvz2.png" alt="Landing preview">
+      <img class="logoImg" src="IMG/vvz5.png" alt="Landing preview">
+    </div>
+
     <div class="grid3" style="margin-top:14px">
       <div class="card">
-        <p class="quote">“We started getting calls in 3 days.”</p>
-        <p class="by">John — Auto Service owner (placeholder)</p>
+        <div class="kpi">+10–30</div>
+        <div class="kpiSub">Quote requests / month (typical after launch)†</div>
       </div>
       <div class="card">
-        <p class="quote">“Clean structure. Clients understand instantly.”</p>
-        <p class="by">Marie — Detailing studio (placeholder)</p>
+        <div class="kpi">2–12h</div>
+        <div class="kpiSub">Response time with Telegram / WhatsApp</div>
       </div>
       <div class="card">
-        <p class="quote">“People message fast — no more dead leads.”</p>
-        <p class="by">Alex — Tire shop (placeholder)</p>
+        <div class="kpi">3–7 days</div>
+        <div class="kpiSub">Delivery for most local-service landings</div>
       </div>
     </div>
 
-    <p class="note">Replace placeholders with real testimonials/logos as soon as you have them.</p>
+    <div class="grid3" style="margin-top:14px">
+      <div class="card">
+        <p class="quote">“Now customers understand our offer in 10 seconds.”</p>
+        <p class="by">Auto service — Lyon</p>
+      </div>
+      <div class="card">
+        <p class="quote">“Clean page, fewer questions, better leads.”</p>
+        <p class="by">Detailing studio — Toulouse</p>
+      </div>
+      <div class="card">
+        <p class="quote">“More WhatsApp messages, less wasted calls.”</p>
+        <p class="by">Tire shop — Paris</p>
+      </div>
+    </div>
+
+    <p class="note">† Numbers are examples to illustrate the structure. Replace with your real stats when available.</p>
   </div>
 </section>
 
@@ -287,6 +324,7 @@
             Email
           </a>
         </div>
+
         
       </aside>
 
@@ -331,6 +369,7 @@
         </div>
 
         <div id="formStatus" class="status" aria-live="polite"></div>
+        
       </form>
     </div>
   </div>

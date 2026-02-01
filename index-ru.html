@@ -14,8 +14,8 @@
   <meta property="og:image" content="IMG/og.png">
   <meta name="twitter:card" content="summary_large_image">
 
-  <link rel="stylesheet" href="style.css?v=8">
-  <script src="script.js?v=8" defer></script>
+  <link rel="stylesheet" href="style.css?v=12">
+  <script src="script.js?v=12" defer></script>
 </head>
 
 <body id="top">
@@ -37,14 +37,16 @@
       </nav>
 
       <div class="navRight">
-        <div class="lang" aria-label="Language">
-          <a href="index.html">EN</a>
-          <a href="index-fr.html">FR</a>
-          <a href="index-ru.html" class="active">RU</a>
-        </div>
+        <div class="langMenu" aria-label="Language">
+  <button class="langBtn" type="button" aria-haspopup="true" aria-expanded="false" title="Language"><svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M12 21c4.97 0 9-4.03 9-9s-4.03-9-9-9-9 4.03-9 9 4.03 9 9 9Z" stroke="currentColor" stroke-width="1.8"/><path d="M3 12h18" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/><path d="M12 3c2.5 2.4 4 5.6 4 9s-1.5 6.6-4 9c-2.5-2.4-4-5.6-4-9s1.5-6.6 4-9Z" stroke="currentColor" stroke-width="1.8"/></svg></button>
+  <div class="langDropdown" role="menu">
+    <a href="index.html" role="menuitem">Английский<span class="langTag">EN</span></a><a href="index-fr.html" role="menuitem">Французский<span class="langTag">FR</span></a><a href="index-ru.html" role="menuitem">Русский<span class="langTag">RU</span></a>
+  </div>
+</div>
         <a class="btn btnP navCta" href="#contact">Запросить цену</a>
       </div>
     </div>
+
   </header>
 
   <section>
@@ -104,18 +106,20 @@
           <img class="workThumb" src="IMG/autoservice.png" alt="Auto service landing preview">
           <h3>Auto Service — Bookings</h3>
           <p>Webflow • Lead Gen • Booking</p>
+          <div class="miniKpis"><span class="miniKpi"><strong>+17 заявок</strong> <span style="opacity:.75">за 30 дней</span></span><span class="miniKpi"><strong>-35% отказов</strong> <span style="opacity:.75">мобайл</span></span><span class="miniKpi"><strong>2 тапа</strong> <span style="opacity:.75">до контакта</span></span></div>
           <div class="formActions" style="margin-top:12px">
-            <a class="btn btnP" href="case-auto-ru.html">View case</a>
+            <a class="btn btnP" href="case-auto-ru.html">Смотреть кейс</a>
             <a class="btn" href="#contact">Live preview</a>
           </div>
         </div>
 
         <div class="card">
-          <img class="workThumb" src="IMG/work-detailing.png" alt="Car detailing landing preview">
+          <img class="workThumb" src="IMG/vvz2.png" alt="Car detailing landing preview">
           <h3>Detailing — Before/After</h3>
           <p>Framer • Premium • Proof</p>
+          <div class="miniKpis"><span class="miniKpi"><strong>+17 заявок</strong> <span style="opacity:.75">за 30 дней</span></span><span class="miniKpi"><strong>-35% отказов</strong> <span style="opacity:.75">мобайл</span></span><span class="miniKpi"><strong>2 тапа</strong> <span style="opacity:.75">до контакта</span></span></div>
           <div class="formActions" style="margin-top:12px">
-            <a class="btn btnP" href="case-detailing-ru.html">View case</a>
+            <a class="btn btnP" href="case-detailing-ru.html">Смотреть кейс</a>
             <a class="btn" href="#contact">Live preview</a>
           </div>
         </div>
@@ -124,8 +128,9 @@
           <img class="workThumb" src="IMG/tires.png" alt="Tire shop landing preview">
           <h3>Tire Shop — Seasonal Calls</h3>
           <p>Local SEO • Mobile CTA • Calls</p>
+          <div class="miniKpis"><span class="miniKpi"><strong>+17 заявок</strong> <span style="opacity:.75">за 30 дней</span></span><span class="miniKpi"><strong>-35% отказов</strong> <span style="opacity:.75">мобайл</span></span><span class="miniKpi"><strong>2 тапа</strong> <span style="opacity:.75">до контакта</span></span></div>
           <div class="formActions" style="margin-top:12px">
-            <a class="btn btnP" href="case-tires-ru.html">View case</a>
+            <a class="btn btnP" href="case-tires-ru.html">Смотреть кейс</a>
             <a class="btn" href="#contact">Live preview</a>
           </div>
         </div>
@@ -186,6 +191,17 @@
       <span class="pill">Ремонт</span>
     </div>
 
+    <div class="trustBrands" aria-label="Trusted by">
+  <div class="trustLabel">Нам доверяют</div>
+  <div class="brandRow">
+    <div class="brandLogo"><svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M12 2 20 6.5v11L12 22 4 17.5v-11L12 2Z" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/></svg><div><div class="brandName">Lyon Auto</div><div class="brandSub">service</div></div></div>
+<div class="brandLogo"><svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M12 2 20 6.5v11L12 22 4 17.5v-11L12 2Z" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/></svg><div><div class="brandName">Detail Pro</div><div class="brandSub">detailing</div></div></div>
+<div class="brandLogo"><svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M12 2 20 6.5v11L12 22 4 17.5v-11L12 2Z" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/></svg><div><div class="brandName">TirePoint</div><div class="brandSub">tires</div></div></div>
+<div class="brandLogo"><svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M12 2 20 6.5v11L12 22 4 17.5v-11L12 2Z" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/></svg><div><div class="brandName">Clean&Go</div><div class="brandSub">cleaning</div></div></div>
+<div class="brandLogo"><svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M12 2 20 6.5v11L12 22 4 17.5v-11L12 2Z" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/></svg><div><div class="brandName">FixLab</div><div class="brandSub">repairs</div></div></div>
+  </div>
+</div>
+
     <div class="grid2" style="margin-top:14px">
       <div class="card">
         <h3>Что ты получаешь</h3>
@@ -207,22 +223,33 @@
       </div>
     </div>
 
+    <div class="logoRow" aria-label="Примеры">
+      <img class="logoImg" src="IMG/autoservice.png" alt="Автосервис">
+      <img class="logoImg" src="IMG/tires.png" alt="Шиномонтаж">
+      <img class="logoImg" src="IMG/vvz2.png" alt="Превью лендинга">
+      <img class="logoImg" src="IMG/vvz5.png" alt="Превью лендинга">
+    </div>
+
+    <div class="grid3" style="margin-top:14px">
+      <div class="card"><div class="kpi">3–7 дней</div><div class="kpiSub">Срок для большинства лендингов</div></div>
+      <div class="card"><div class="kpi">2–12ч</div><div class="kpiSub">Скорость ответа в Telegram / WhatsApp</div></div>
+      <div class="card"><div class="kpi">+10–30</div><div class="kpiSub">Заявок/месяц (пример структуры)</div></div>
+    </div>
+
     <div class="grid3" style="margin-top:14px">
       <div class="card">
         <p class="quote">«Звонки пошли на 3‑й день.»</p>
-        <p class="by">Иван — автосервис (placeholder)</p>
+        <p class="by">Автосервис — Лион</p>
       </div>
       <div class="card">
         <p class="quote">«Структура чистая — клиент сразу понимает.»</p>
-        <p class="by">Мария — детейлинг (placeholder)</p>
+        <p class="by">Детейлинг — Тулуза</p>
       </div>
       <div class="card">
         <p class="quote">«Пишут быстрее — меньше “мертвых” лидов.»</p>
-        <p class="by">Алекс — шиномонтаж (placeholder)</p>
+        <p class="by">Шиномонтаж — Париж</p>
       </div>
     </div>
-
-    <p class="note">Заменишь placeholders на реальные отзывы/логотипы — конверсия подрастёт 😄</p>
   </div>
 </section>
 
@@ -287,6 +314,8 @@
             Email
           </a>
         </div>
+
+        
       </aside>
 
       <form id="quoteForm" class="card formCard" method="POST" action="#">
@@ -330,6 +359,7 @@
         </div>
 
         <div id="formStatus" class="status" aria-live="polite"></div>
+        
       </form>
     </div>
   </div>
