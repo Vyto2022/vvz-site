@@ -429,3 +429,28 @@ textarea{resize: vertical; min-height: 120px}
   object-fit: cover;
   display: block;
 }
+
+/* =========================================================
+   PRICING (v7): align CTA buttons across cards
+   - make pricing cards equal height
+   - push CTA container to bottom
+   ========================================================= */
+.pricing .grid.cols-3{
+  align-items: stretch;
+}
+.pricing .card{
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+/* let the feature list take remaining space */
+.pricing .card .ul{
+  flex: 1 1 auto;
+}
+
+/* CTA wrapper is the last block inside each card (currently inline-styled) */
+.pricing .card > div:last-child{
+  margin-top: auto !important;  /* push to bottom */
+  padding-top: 14px;            /* keep the visual gap */
+}
