@@ -6,8 +6,8 @@
  */
 const CONFIG = {
   submitMode: 'googlesheets', // 'formspree' | 'googlesheets'
-  formspreeEndpoint: 'https://formspree.io/f/xjgwkwgo',
-  googleScriptUrl: 'PASTE_YOUR_GOOGLE_SCRIPT_URL_HERE', // https://script.google.com/macros/s/XXXXX/exec
+  formspreeEndpoint: 'https://formspree.io/f/xwvopbpg',
+  googleScriptUrl: 'https://script.google.com/macros/s/AKfycbw5Szo8Ygc80Hg2oikw9Y3X_1pjNw-qHqvbzU5EHC9B_faIhV9ZLuHBJVfx-BBSAap7/exec', // https://script.google.com/macros/s/XXXXX/exec
   thankYouPage: 'thanks.html',
 };
 
